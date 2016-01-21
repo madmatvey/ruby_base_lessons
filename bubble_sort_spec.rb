@@ -7,3 +7,10 @@ describe "#bubble_sort" do
 	end
 
 end
+
+describe "#bubble_sort_by" do 
+	it "sort example array with block given" do
+		s = bubble_sort_by(["hi","hello","hey"]){|left,right| right.length - left.length }
+		s.should == ["hi", "hey", "hello"]
+	end
+end
